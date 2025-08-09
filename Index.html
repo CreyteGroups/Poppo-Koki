@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Koke Zeleke | Premium Poppo Live Agent</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <style>
+            :root {
+                --primary: #ff1493;
+                --primary-dark: #d3127a;
+                --secondary: #6e45e2;
+                --dark: #2e2e2e;
+                --light: #ffffff;
+                --gray: #f5f5f7;
+                --text: #4a4a4a;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Open Sans", sans-serif;
+                color: var(--text);
+                background-color: var(--light);
+                line-height: 1.6;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--primary);
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            /* Header & Hero Section */
+            .hero {
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                color: var(--light);
+                padding: 60px 0;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-family: "Poppins", sans-serif;
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: 0 auto 30px;
+                opacity: 0.9;
+            }
+
+            /* Language Switcher */
+            .language-switcher {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 30px;
+                flex-wrap: wrap;
+            }
+
+            .language-btn {
+                background: rgba(255, 255, 255, 0.2);
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 20px;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+
+            .language-btn.active {
+                background: white;
+                color: var(--primary);
+            }
+
+            /* Sections */
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-family: "Poppins", sans-serif;
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: var(--primary);
+                margin-bottom: 20px;
+            }
+
+            /* Cards */
+            .card {
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                padding: 25px;
+                margin-bottom: 25px;
+            }
+
+            /* Steps */
+            .steps-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            @media (min-width: 768px) {
+                .steps-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            .step-number {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                color: white;
+                border-radius: 50%;
+                font-weight: 600;
+                text-align: center;
+                line-height: 35px;
+                margin-bottom: 15px;
+            }
+
+            .step-image {
+                width: 100%;
+                margin: 20px 0;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .half {
+                width: 50%;
+            }
+
+            .step-image img {
+                width: 100%;
+                height: auto;
+            }
+
+            /* Buttons */
+            .btn {
+                display: inline-block;
+                padding: 10px 24px;
+                border-radius: 25px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .btn-primary {
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                color: white;
+            }
+
+            .btn-primary:hover {
+                background: linear-gradient(
+                    135deg,
+                    var(--primary-dark),
+                    #5d3ad6
+                );
+            }
+
+            .btn-outline {
+                background: transparent;
+                color: var(--primary);
+                border: 2px solid var(--primary);
+            }
+
+            .btn-outline:hover {
+                background: var(--primary);
+                color: white;
+            }
+
+            /* Features */
+            .features-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            @media (min-width: 768px) {
+                .features-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            .feature-card {
+                text-align: center;
+                padding: 20px;
+            }
+
+            .spe {
+                background: var(--primary-dark);
+                color: white;
+            }
+
+            .feature-icon {
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 15px;
+                font-size: 1.5rem;
+            }
+
+            /* Contact */
+            .contact-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            @media (min-width: 992px) {
+                .contact-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            .contact-method {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                padding: 15px;
+                border-radius: 8px;
+                background: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            }
+
+            .contact-icon {
+                width: 45px;
+                height: 45px;
+                background: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.1rem;
+            }
+
+            /* Footer */
+            footer {
+                background: var(--dark);
+                color: white;
+                padding: 40px 0 20px;
+            }
+
+            .footer-content {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+
+            @media (min-width: 768px) {
+                .footer-content {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            .footer-logo {
+                font-family: "Poppins", sans-serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 15px;
+                color: var(--primary);
+            }
+
+            .footer-links h3 {
+                font-family: "Poppins", sans-serif;
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+            }
+
+            .footer-links ul {
+                list-style: none;
+            }
+
+            .footer-links li {
+                margin-bottom: 8px;
+            }
+
+            .footer-links a {
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            .footer-links a:hover {
+                color: white;
+            }
+
+            .social-links {
+                display: flex;
+                gap: 10px;
+                margin-top: 15px;
+            }
+
+            .social-link {
+                width: 35px;
+                height: 35px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .copyright {
+                text-align: center;
+                padding-top: 20px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 0.9rem;
+            }
+
+            /* Responsive Adjustments */
+            @media (max-width: 768px) {
+                .hero h1 {
+                    font-size: 2rem;
+                }
+
+                .hero p {
+                    font-size: 1rem;
+                }
+                .half {
+                    width: 100%;
+                }
+                section {
+                    padding: 40px 0;
+                }
+
+                .section-title {
+                    font-size: 1.5rem;
+                }
+            }
+
+            /* Translation styling */
+            .translatable {
+                transition: opacity 0.3s ease;
+            }
+
+            .language-content {
+                display: none;
+            }
+
+            .language-content.active {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1
+                        class="translatable"
+                        data-en="Unlock Your Earning Potential with Poppo Live"
+                        data-am="በፖፖ ላይቭ የገቢ እድልዎን ይክፈቱ"
+                    >
+                        Unlock Your Earning Potential with Poppo Live
+                    </h1>
+                    <p
+                        class="translatable"
+                        data-en="Join Agent Koke Zeleke's team and start earning $20+ daily with flexible hours"
+                        data-am="ከኤጀንት ኮኬ ዘለቀ ጋር ተቀላቀሉ እና በቀላል ሰዓት በቀን ከ20 ዶላር በላይ ያግኙ"
+                    >
+                        Join Agent Koke Zeleke's team and start earning $20+
+                        daily with flexible hours
+                    </p>
+
+                    <div class="language-switcher">
+                        <button class="language-btn active" data-lang="en">
+                            English
+                        </button>
+                        <button class="language-btn" data-lang="am">
+                            Amharic
+                        </button>
+                    </div>
+
+                    <a href="#steps" class="btn btn-primary">
+                        <i class="fas fa-play-circle"></i>
+                        <span
+                            class="translatable"
+                            data-en="Get Started Now"
+                            data-am="አሁን ይጀምሩ"
+                            >Get Started Now</span
+                        >
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Intro Section -->
+        <section class="container" style="margin-top: 20px" id="story">
+            <div class="card">
+                <h2
+                    class="section-title translatable"
+                    style="font-size: 25px"
+                    data-en="Why Choose Poppo Live?"
+                    data-am="ለምን ፖፖ ላይቭ መምረጥ ይገባል?"
+                >
+                    Why Choose Poppo Live?
+                </h2>
+                <p
+                    class="translatable"
+                    data-en="Hello, I'm Agent Koke Zeleke. In just 5 months working with Poppo Live, I've built a steady income stream earning over $20 daily. The best part? You can do it too!"
+                    data-am="ሰላም፣ እኔ ኤጀንት ኮኬ ዘለቀ ነኝ። ከፖፖ ላይቭ ላይ ለ5 ወር ብቻ በመስራት በቀን 20 ዶላር በላይ የሆነ የቋሚ ገቢ ምንጭ ፈጥሬያለሁ። ምርጡ ክፍል? እርስዎም ማድረግ ይችላሉ!"
+                >
+                    Hello, I'm Agent Koke Zeleke. In just 5 months working with
+                    Poppo Live, I've built a steady income stream earning over
+                    $20 daily. The best part? You can do it too!
+                </p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3
+                            class="translatable"
+                            data-en="No Education Required"
+                            data-am="ትምህርት አያስፈልግም"
+                        >
+                            No Education Required
+                        </h3>
+                        <p
+                            class="translatable"
+                            data-en="Anyone can succeed regardless of educational background"
+                            data-am="ማንኛውም ሰው የትምህርት ደረጃ ሳይገድበው መስራት ይችላል"
+                        >
+                            Anyone can succeed regardless of educational
+                            background
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3
+                            class="translatable"
+                            data-en="Engaging Features"
+                            data-am="ማራኪ ባህሪያት"
+                        >
+                            Engaging Features
+                        </h3>
+                        <p
+                            class="translatable"
+                            data-en="From themed rooms, games, and events to special live contests and leaderboards and more"
+                            data-am="ከተለያዩ ክፍሎች፣ ጨዋታዎች እና ዝግጅቶች እስከ ልዩ ቀጥታ ውድድሮች እና አለቆች ሰሌዳ ድረስ"
+                        >
+                            From themed rooms, games, and events to special live
+                            contests and leaderboards and more
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                        <h3
+                            class="translatable"
+                            data-en="Global Community"
+                            data-am="ዓለም አቀፍ ማህበረሰብ"
+                        >
+                            Global Community
+                        </h3>
+                        <p
+                            class="translatable"
+                            data-en="Connect with people worldwide in your native language"
+                            data-am="በማንኛውም ቋንቋ ከዓለም ዙሪያ ከሚገኙ ሰዎች ጋር ይገናኛሉ"
+                        >
+                            Connect with people worldwide in your native
+                            language
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps Section -->
+        <section id="steps" class="container">
+            <h2
+                class="section-title translatable"
+                style="font-size: 25px"
+                data-en="Step-by-Step Setup Guide"
+                data-am="ለመጀመር መከተል ያለባቹ መመሪያዎች "
+            >
+                Step-by-Step Setup Guide
+            </h2>
+            <p
+                class="translatable"
+                data-en="Follow these simple steps to start your Poppo Live journey today"
+                data-am="የፖፖ ላይቭ ለመጀመር እነዚህን ቀላል መመሪያዎች ይከተሉ"
+            >
+                Follow these simple steps to start your Poppo Live journey today
+            </p>
+
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <div class="card" style="margin-top: 20px">
+                    <div class="step-number">1</div>
+                    <h3
+                        class="translatable"
+                        data-en="Download the App"
+                        data-am="መተግበሪያውን ያውርዱ"
+                    >
+                        Download the App
+                    </h3>
+                    <div class="step-image"><img src="1gaw.jpg" /></div>
+                    <p class="translatable"></p>
+                    <a
+                        href="https://aaaonline.info/88nQKz"
+                        class="btn btn-outline"
+                        style="margin-top: 15px"
+                    >
+                        <span
+                            class="translatable"
+                            data-en="Download Now"
+                            data-am="አሁን ያውርዱ"
+                            >Download Now</span
+                        >
+                    </a>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="card">
+                    <div class="step-number">2</div>
+                    <h3
+                        class="translatable"
+                        data-en="Choose Login Method"
+                        data-am="የመመዝገቢያ መንገድ ይምረጡ"
+                    >
+                        Choose Login Method
+                    </h3>
+                    <div class="step-image"><img src="login.jpg" /></div>
+                    <p
+                        class="translatable"
+                        data-en="Choose What Suits You: Select your preferred login method after downloading."
+                        data-am="ለእርስዎ የሚስማማውን የመመዝገቢያ መንገድ ይምረጡ"
+                    >
+                        <strong>Choose What Suits You:</strong> Select your
+                        preferred login method after downloading.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="card">
+                    <div class="step-number">3</div>
+                    <h3
+                        class="translatable"
+                        data-en="Front page menu"
+                        data-am="የፊለፊት ገጽ ሜኑ"
+                    >
+                        Front page menu
+                    </h3>
+                    <div class="step-image">
+                        <img src="photo_2025-06-09_09-16-04.jpg" />
+                    </div>
+                    <p
+                        class="translatable"
+                        data-en=" Tap the light bulb symbol (5th icon) at the bottom right."
+                        data-am=" ከታች በቀኝ በኩል ያለውን የብርሃን ምልክት (5ኛውን) ይንኩ።"
+                    >
+                        Tap the light bulb symbol (5th icon) at the bottom
+                        right.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="card">
+                    <div class="step-number">4</div>
+                    <h3
+                        class="translatable"
+                        data-en="Complete Authentication"
+                        data-am="ማረጋገጫ ይጨርሱ"
+                    >
+                        Complete Authentication
+                    </h3>
+                    <div class="step-image"><img src="setting.jpg" /></div>
+                    <p
+                        class="translatable"
+                        data-en='Verification: Tap "Auth", provide your photo. Follow instructions carefully.'
+                        data-am='"Auth" የሚለውን ይንኩ፣ ፎቶዎን ያቅርቡ። መመሪያዎቹን በጥንቃቄ ይከተሉ።'
+                    >
+                        <strong>Verification:</strong> Tap "Auth", provide photo
+                        . Follow instructions carefully.
+                    </p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="card">
+                    <div class="step-number">5</div>
+                    <h3
+                        class="translatable"
+                        data-en="Agent Setup"
+                        data-am="ኤጀንሲ ለመግባት"
+                    >
+                        Agent Setup
+                    </h3>
+                    <div class="step-image"><img src="5.jpg" /></div>
+                    <p
+                        class="translatable"
+                        data-en='<strong>Agency Setup:</strong> Tap "My Agency", enter agent ID: <code>45261071</code>, and confirm.'
+                        data-am=' "My Agency" የሚለውን ይንኩ፣ የኤጀንት መለያ ቁጥር ያስገቡ: <code>45261071</code>፣ ከዚያም ያረጋግጡ።'
+                    >
+                        <strong>Agency Setup:</strong> Tap "My Agency", enter
+                        agent ID: <code>45261071</code>, and confirm.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Become Agent Section -->
+        <section id="agent" class="container" style="margin-top: 20px">
+            <div class="card">
+                <h2
+                    class="section-title translatable"
+                    style="font-size: 25px"
+                    data-en="Become a Direct Agent"
+                    data-am="ቀጥታ ኤጀንት ይሁኑ"
+                >
+                    Become a Direct Agent
+                </h2>
+                <p
+                    class="translatable"
+                    data-en="Want to build your own team and earn commissions? Follow these steps to become a direct agent:"
+                    data-am="የራስዎን ቡድን መገንባት እና ኮሚሽን ለማግኘት ይፈልጋሉ? ቀጥታ ኤጀንት ለመሆን እነዚህን ደረጃዎች ይከተሉ:"
+                >
+                    Want to build your own team and earn commissions? Follow
+                    these steps to become a direct agent:
+                </p>
+
+                <ol style="margin: 20px 0 20px 20px">
+                    <li
+                        style="margin-bottom: 10px"
+                        class="translatable"
+                        data-en="Copy your Poppo ID from your profile"
+                        data-am=" የፖፖ መለያ ቁጥርዎን ኮፒ አድርጉ"
+                    >
+                        Copy your Poppo ID from your profile
+                    </li>
+                    <li
+                        style="margin-bottom: 10px"
+                        class="translatable"
+                        data-en="Click our <a href='https://h5.vshowapi.com/guild/agency_invite/register/?c=poppo&temp_id=108151&inviter_id=45261071&temp_type=2' style='font-weight: 600'>Agency Registration Link</a>"
+                        data-am="የእኛን <a href='https://h5.vshowapi.com/guild/agency_invite/register/?c=poppo&temp_id=108151&inviter_id=45261071&temp_type=2' style='font-weight: 600'> Agency Registration Link </a> ይንኩ"
+                    >
+                        Click our
+                        <a
+                            href="https://h5.vshowapi.com/guild/agency_invite/register/?c=poppo&temp_id=108151&inviter_id=45261071&temp_type=2"
+                            style="font-weight: 600"
+                            >Agency Registration Link</a
+                        >
+                    </li>
+                    <div class="step-image half">
+                        <img src="ali-yemegbalet-photo.jpg" />
+                    </div>
+                    <li
+                        style="margin-bottom: 10px"
+                        class="translatable"
+                        data-en='Enter your ID and tap "Get"'
+                        data-am='መለያ ቁጥርዎን ያስገቡ እና "Get" የሚለውን ይንኩ'
+                    >
+                        Enter your ID and tap "Get"
+                    </li>
+                    <li
+                        style="margin-bottom: 10px"
+                        class="translatable"
+                        data-en="Enter the verification code and submit"
+                        data-am="የማረጋገጫ ኮዱን ያስገቡ እና ይላኩት"
+                    >
+                        Enter the verification code and submit
+                    </li>
+                </ol>
+
+                <a
+                    href="https://h5.vshowapi.com/guild/agency_invite/register?c=poppo&temp_id=108151&inviter_id=45261071&temp_type=2"
+                    class="btn btn-primary"
+                >
+                    <i class="fas fa-user-tie"></i>
+                    <span
+                        class="translatable"
+                        data-en="Register as Agent"
+                        data-am="እንደ ኤጀንት ይመዝገቡ"
+                        >Register as Agent</span
+                    >
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="container">
+            <h2
+                class="section-title translatable"
+                style="font-size: 25px"
+                data-en="Contact Me"
+                data-am="እኔን ለማግኘት"
+            >
+                Contact Me
+            </h2>
+            <p
+                class="translatable"
+                data-en="Have questions? Reach out through any of these channels"
+                data-am="ጥያቄዎች አሉዎት? በእነዚህ ማናቸውም መንገዶች ያግኙኝ"
+            >
+                Have questions? Reach out through any of these channels
+            </p>
+
+            <div class="contact-grid" style="margin-top: 20px">
+                <div>
+                    <div class="card">
+                        <h3
+                            class="translatable"
+                            data-en="Get Personalized Support"
+                            data-am="ድጋፍ ያግኙ"
+                        >
+                            Get Personalized Support
+                        </h3>
+                        <p
+                            class="translatable"
+                            data-en="I'm here to help you succeed with Poppo Live. Contact me directly for one-on-one assistance with setup or any questions."
+                            data-am="እናንተን ለመርዳት እዚህ አለሁኝ። ማንኛውም ጥያቄ ካላችሁ በነዚ መንገዶች ያግኙኝ።"
+                        >
+                            I'm here to help you succeed with Poppo Live.
+                            Contact me directly for one-on-one assistance with
+                            setup or any questions.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4
+                                    class="translatable"
+                                    data-en="Phone"
+                                    data-am="ስልክ"
+                                >
+                                    Phone
+                                </h4>
+                                <a href="tel:+251940162574">+251 940 162 574</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div>
+                                <h4
+                                    class="translatable"
+                                    data-en="Telegram"
+                                    data-am="ቴሌግራም"
+                                >
+                                    Telegram
+                                </h4>
+                                <a href="https://t.me/koki4445" target="_blank"
+                                    >@koki_Telegram</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div>
+                                <h4
+                                    class="translatable"
+                                    data-en="Telegram channel"
+                                    data-am="የቴሌግራም ቻናል"
+                                >
+                                    Telegram channel
+                                </h4>
+                                <a
+                                    href="https://t.me/Koki_Agency"
+                                    target="_blank"
+                                    >@koki_Agency</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </div>
+                            <div>
+                                <h4
+                                    class="translatable"
+                                    data-en="TikTok"
+                                    data-am="ቲክቶክ"
+                                >
+                                    TikTok
+                                </h4>
+                                <a
+                                    href="https://www.tiktok.com/@konjitzeleke"
+                                    target="_blank"
+                                    >Koki TikTok</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Template Section -->
+        <section class="container" id="reyan" style="margin-top: 30px">
+            <div class="card spe">
+                <h2
+                    class="section-title translatable"
+                    style="font-size: 25px; color: white"
+                    data-en="Custom Template Service"
+                    data-am="እንደዚህ ድህረገፅ ማሰራት ይፈልጋሉ"
+                >
+                    Custom Template Service
+                </h2>
+                <p
+                    class="translatable"
+                    style="color: whitesmoke"
+                    data-en="We can design a custom template with your name, photo, and social links to help you recruit more agents. Just click this button."
+                    data-am="ይህን መሰል ስሞትን, አካውንቶን እና ሌሎች ነገሮችን የሚያካትት ድረ ገፅ ማሰራት የምትፈልጉ ከሆነ ከታች ያለውን ይጫኑ:: "
+                >
+                    We can design a custom template with your name, photo, and
+                    social links to help you recruit more agents. Just click
+                    this button.
+                </p>
+
+                <a
+                    href="https://t.me/Reyanmaru"
+                    class="btn btn-primary"
+                    target="_blank"
+                    style="margin-top: 20px"
+                >
+                    <i class="fab fa-telegram"></i>
+                    <span
+                        class="translatable"
+                        data-en="Contact me on Telegram"
+                        data-am="በቴሌግራም ያግኙን"
+                        >Contact me on Telegram</span
+                    >
+                </a>
+                <a
+                    href="https://popposite.netlify.app/"
+                    class="btn btn-primary"
+                    target="_blank"
+                    style="margin-top: 20px"
+                >
+                    <i class="fab fa-website"></i>
+                    <span
+                        class="translatable"
+                        data-en="Our Website"
+                        data-am="የኛ ድህረ ገጽ"
+                    >
+                        Our Website</span
+                    >
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <span class="footer-logo">Koke Zeleke</span>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3
+                            class="translatable"
+                            data-en="Quick Links"
+                            data-am="ፈጣን አገናኞች"
+                        >
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li>
+                                <a
+                                    href="#steps"
+                                    class="translatable"
+                                    data-en="Step-by-Step Guide"
+                                    data-am="ደረጃ በደረጃ መመሪያ"
+                                    >Step-by-Step Guide</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#agent"
+                                    class="translatable"
+                                    data-en="Become an Agent"
+                                    data-am="ኤጀንት ይሁኑ"
+                                    >Become an Agent</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#story"
+                                    class="translatable"
+                                    data-en="Success Stories"
+                                    data-am="የዕድለኞች ታሪኮች"
+                                    >Success Stories</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#reyan"
+                                    class="translatable"
+                                    data-en="Wanna create a website like this"
+                                    data-am="እንደዚህ ያለ ድረ-ገጽ መፍጠር ይፈልጋሉ?"
+                                >
+                                    Wanna create a website like this
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p
+                        class="translatable"
+                        data-en=" Made in Ethiopia 🇪🇹"
+                        data-am=" በኢትዮጵያ የተሰራ 🇪🇹"
+                    >
+                        Made in Ethiopia 🇪🇹
+                    </p>
+                    <p>
+                        Created by Popposite WBA | © 2025 All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Smooth scrolling
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        document
+                            .querySelector(this.getAttribute("href"))
+                            .scrollIntoView({
+                                behavior: "smooth"
+                            });
+                    });
+                });
+
+                // Language switcher functionality
+                const languageBtns = document.querySelectorAll(".language-btn");
+
+                // Function to switch language
+                function switchLanguage(lang) {
+                    // Update all translatable elements
+                    document
+                        .querySelectorAll(".translatable")
+                        .forEach(element => {
+                            if (element.dataset[lang]) {
+                                // For elements with HTML content
+                                if (element.innerHTML.includes("<")) {
+                                    const tempDiv =
+                                        document.createElement("div");
+                                    tempDiv.innerHTML = element.dataset[lang];
+                                    element.innerHTML = tempDiv.innerHTML;
+                                } else {
+                                    // For regular text content
+                                    element.textContent = element.dataset[lang];
+                                }
+                            }
+                        });
+
+                    // Update active button
+                    languageBtns.forEach(btn => {
+                        if (btn.dataset.lang === lang) {
+                            btn.classList.add("active");
+                        } else {
+                            btn.classList.remove("active");
+                        }
+                    });
+
+                    // Store language preference
+                    localStorage.setItem("preferredLanguage", lang);
+                }
+
+                // Button click handlers
+                languageBtns.forEach(btn => {
+                    btn.addEventListener("click", function () {
+                        switchLanguage(this.dataset.lang);
+                    });
+                });
+
+                // Check for saved language preference
+                const savedLang = localStorage.getItem("preferredLanguage");
+                if (savedLang && savedLang !== "en") {
+                    switchLanguage(savedLang);
+                }
+            });
+        </script>
+    </body>
+</html>
